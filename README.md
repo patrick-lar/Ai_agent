@@ -1,13 +1,22 @@
-# Creative Tagline Generator
+# AI Question Answering System
 
-A web application that uses Azure's GPT-4o model to generate creative taglines for product descriptions.
+A Retrieval-Augmented Generation (RAG) web application that uses Azure's GPT-4o model to answer questions based on your knowledge base.
 
 ## Features
 
-- Simple and intuitive user interface
-- Powered by Azure OpenAI GPT-4o
-- Generates multiple creative taglines for any product description
-- Responsive design
+- Ask questions and get intelligent answers powered by Azure GPT-4o
+- Add web pages to your knowledge base by URL
+- Conversation history to maintain context
+- Retrieval-augmented generation to provide more accurate answers
+- Responsive design for all devices
+
+## How It Works
+
+This application uses a RAG (Retrieval-Augmented Generation) approach:
+
+1. **Retrieval**: When you ask a question, the system searches through your knowledge base to find relevant information
+2. **Augmentation**: The relevant information is provided as context to the AI model
+3. **Generation**: The AI model generates a response based on both its training and the specific context provided
 
 ## Setup Instructions
 
@@ -41,21 +50,17 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-### Deployment
+## Usage
 
-This application can be easily deployed to Netlify or other hosting platforms.
-
-## How It Works
-
-1. Enter a product description in the text area
-2. Click "Generate Taglines"
-3. The application sends the description to the Azure OpenAI API
-4. GPT-4o generates creative taglines based on the description
-5. The taglines are displayed on the page
+1. **Add Knowledge**: Enter URLs of web pages to add to your knowledge base
+2. **Ask Questions**: Type your question in the input field and click "Ask Question"
+3. **View Answers**: See the AI's response, which is informed by both its training and your knowledge base
+4. **Conversation History**: Previous questions and answers are saved for context
 
 ## Technologies Used
 
 - Next.js
 - React
 - Azure OpenAI Service
-- CSS Modules
+- Axios for HTTP requests
+- Cheerio for web scraping

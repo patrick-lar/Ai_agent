@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
 }
 
@@ -38,23 +38,47 @@
   margin-bottom: 2rem;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0070f3;
+}
+
 .form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
-.textarea {
+.input, .textarea {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 1rem;
-  resize: vertical;
   font-family: inherit;
+}
+
+.textarea {
+  resize: vertical;
 }
 
 .button {
@@ -82,32 +106,50 @@
   margin-bottom: 1rem;
 }
 
-.results {
+.chatContainer {
   width: 100%;
   background-color: white;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 1rem;
 }
 
-.taglineList {
-  list-style-type: none;
-  padding: 0;
+.chatHistory {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
-.taglineItem {
-  padding: 1rem;
-  margin-bottom: 0.5rem;
+.exchange {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1rem;
+}
+
+.question {
   background-color: #f0f9ff;
-  border-left: 4px solid #0070f3;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  transition: transform 0.2s ease;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0.5rem;
 }
 
-.taglineItem:hover {
-  transform: translateX(5px);
+.answer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  border-left: 4px solid #0070f3;
+}
+
+.documents {
+  margin-top: 1rem;
+}
+
+.documents ul {
+  padding-left: 1.5rem;
+}
+
+.documents li {
+  margin-bottom: 0.5rem;
 }
 
 .footer {

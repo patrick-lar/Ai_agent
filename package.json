@@ -1,5 +1,5 @@
 {
-  "name": "tagline-generator",
+  "name": "rag-question-answering",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,11 @@
     "react-dom": "^18.2.0",
     "axios": "^1.6.0",
     "@azure/openai": "^1.0.0-beta.6",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "langchain": "^0.0.170",
+    "langchain-community": "^0.0.20",
+    "langchain-openai": "^0.0.10",
+    "pdf-parse": "^1.1.1",
+    "cheerio": "^1.0.0-rc.12"
   }
 }
